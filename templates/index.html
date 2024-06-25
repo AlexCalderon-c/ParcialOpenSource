@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecuación Cuadrática</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>ECUACIÓN CUADRÁTICA</h1>
+    <section class="form">
+        <div class="form__img-container">
+
+        </div>
+        <form action="/submit" method="post" class="form__form">
+            <div class="form__input-container">
+                <label>Digite el primer coeficiente: 
+                    <input type="text" name="Valora" id="ax2" placeholder="a">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Digite el segundo coeficiente:
+                    <input type="text" name="Valorb" id="ax" placeholder="b">
+                </label>
+            </div>
+            <div class="form__input-container">
+                <label>Digite el tercer coeficiente:
+                    <input type="text" name="Valorc" id="a" placeholder="c">
+                </label>
+            </div>
+            <div class="form__input-container submit-button">
+                <input type="submit" value="CALCULAR">
+            </div>
+            <div class="form__input-container answer-input">
+                {% if res1 %}
+                <label id="respuesta1">Primera respuesta: {{res1}}</label>
+                {% else %}
+                <label>Primera respuesta:</label>
+                {% endif %}
+            </div>
+            <div class="form__input-container answer-input">
+                {% if res2 %}
+                <label id="respuesta1">Segunda respuesta: {{res2}}</label>
+                {% else %}
+                <label>Segunda respuesta:</label>
+                {% endif %}
+            </div>
+        </form>
+    </section>
+    
+
+</body>
+</html>

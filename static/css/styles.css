@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "montserrat";
+    src: url("../fonts/Montserrat/static/Montserrat-Regular.ttf");
+}
+
+body{
+    margin: 0;
+    font-family: montserrat;
+    background-color: #e2eaff;
+}
+
+form, input, div, label{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.form{
+    margin: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    max-width: 600px;
+    border-radius: 12px;
+
+}
+
+.form__form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "input1 input1"
+    "input2 input2"
+    "input3 input3"
+    "button button"
+    "answer answer1";
+    gap: 9px;
+}
+
+.form__input-container input{
+    width: 100%;
+    padding: 6px;
+    margin: 6px;
+    border: none;
+    box-shadow: 0 2px 4px #0003;
+    font-family: inherit;
+    border-radius: 6px;
+}
+
+
+.form__img-container{
+    background-image: url("https://okdiario.com/img/2017/07/02/ecuacion-de-segundo-grado-1.jpg");
+    min-width: 400px;
+    max-width: 50%;
+    height: 200px;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+
+.submit-button input{
+    padding: 10px;
+    background-color: #48e;
+    color: #fff;
+    box-shadow: 0 0 0 0;
+    transition: background-color 1s, box-shadow 1s;
+}
+
+.submit-button input:hover{
+    background-color: rgb(18,52,100);
+    color: #fff;
+    box-shadow: 0 3px 6px #0003;
+    cursor: pointer;
+}
+
+.form__input-container:first-child{
+    grid-area: input1;
+}
+.form__input-container:nth-child(2){
+    grid-area: input2;
+}
+.form__input-container:nth-child(3){
+    grid-area: input3;
+}
+
+.submit-button{
+    grid-area: button;
+}
+
+.answer-input:first-child{
+    grid-area: answer;
+}
+.answer-input:last-child{
+    grid-area: answer1;
+}
